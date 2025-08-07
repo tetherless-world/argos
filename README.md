@@ -1,19 +1,19 @@
-# The Midnight theme
+# The Slate theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/midnight/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/midnight/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-midnight.svg)](https://badge.fury.io/rb/jekyll-theme-midnight)
+[![.github/workflows/ci.yaml](https://github.com/pages-themes/slate/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/slate/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-slate.svg)](https://badge.fury.io/rb/jekyll-theme-slate)
 
-*Midnight is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/midnight), or even [use it today](#usage).*
+*Slate is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/slate), or even [use it today](#usage).*
 
-![Thumbnail of Midnight](thumbnail.png)
+![Thumbnail of Slate](thumbnail.png)
 
 ## Usage
 
-To use the Midnight theme:
+To use the Slate theme:
 
 1. Add the following to your site's `_config.yml`:
 
     ```yml
-    remote_theme: pages-themes/midnight@v0.2.0
+    remote_theme: pages-themes/slate@v0.2.0
     plugins:
     - jekyll-remote-theme # add this line to the plugins list if you already have one
     ```
@@ -28,12 +28,11 @@ To use the Midnight theme:
 
 ### Configuration variables
 
-Midnight will respect the following variables, if set in your site's `_config.yml`:
+Slate will respect the following variables, if set in your site's `_config.yml`:
 
 ```yml
 title: [The title of your site]
-tagline: [A very short description of your site's purpose, used as subtitle]
-description: [A short description of your site's purpose (e.g. for search engines)]
+description: [A short description of your site's purpose]
 ```
 
 Additionally, you may choose to set the following optional variables:
@@ -63,8 +62,8 @@ If you'd like to add your own custom styles:
 
 If you'd like to change the theme's HTML layout:
 
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/midnight/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/slate/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/slate/blob/master/_layouts/default.html).
+2. For more extensive changes, [copy the original template](https://github.com/pages-themes/slate/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
 3. Create a file called `/_layouts/default.html` in your site
 4. Paste the default layout content copied in the first step
 5. Customize the layout as you'd like
@@ -77,7 +76,7 @@ Google has released several iterations to their Google Analytics code over the y
 
 Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
-1. Look at [the template source](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+1. Look at [the template source](https://github.com/pages-themes/slate/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
 2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
     ```yml
     github:
@@ -92,21 +91,21 @@ For more information, see [the Jekyll variables documentation](https://jekyllrb.
 
 ## Roadmap
 
-See the [open issues](https://github.com/pages-themes/midnight/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/pages-themes/slate/issues) for a list of proposed features (and known issues).
 
 ## Project philosophy
 
-The Midnight theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+The Slate theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
 ## Contributing
 
-Interested in contributing to Midnight? We'd love your help. Midnight is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+Interested in contributing to Slate? We'd love your help. Slate is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
 
 ### Previewing the theme locally
 
 If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/midnight`)
+1. Clone down the theme's repository (`git clone https://github.com/pages-themes/slate`)
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
 4. Run `bundle exec jekyll serve` to start the preview server
