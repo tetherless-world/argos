@@ -6,7 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    
+    <style>
+      /* --- Custom Styles for Side Navigation --- */
+      .main-container {
+        display: flex;
+        gap: 2em; /* Creates space between sidebar and content */
+      }
 
+      #sidebar {
+        width: 220px; /* Fixed width for the sidebar */
+        flex-shrink: 0; /* Prevents the sidebar from shrinking */
+      }
+
+      #sidebar nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #sidebar nav a {
+        display: block;
+        padding: 10px 15px;
+        color: #007bff; /* A nice blue for links */
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+
+      #sidebar nav a:hover {
+        background-color: #f0f0f0; /* Light grey background on hover */
+        color: #0056b3;
+      }
+      
+      #sidebar nav a.active {
+        background-color: #007bff; /* Blue background for the active page */
+        color: #ffffff; /* White text for the active page */
+        font-weight: bold;
+      }
+
+      #main_content {
+        flex-grow: 1; /* Allows the main content to take up remaining space */
+        width: 100%;
+      }
+      
+      /* --- Responsive Design --- */
+      @media screen and (max-width: 768px) {
+        .main-container {
+          flex-direction: column; /* Stack sidebar and content on small screens */
+        }
+        #sidebar {
+          width: 100%; /* Sidebar takes full width */
+          margin-bottom: 1.5em;
+        }
+      }
+    </style>
+    
 {% seo %}
     {% include head-custom.html %}
   </head>
