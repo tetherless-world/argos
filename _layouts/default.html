@@ -11,6 +11,7 @@
       /* --- Custom Styles for Side Navigation (Slate Theme) --- */
       .main-container {
         display: flex;
+        align-items: flex-start; /* Aligns items to the top */
         gap: 2.5em; /* Creates space between sidebar and content */
       }
 
@@ -51,14 +52,15 @@
         text-decoration: none;
       }
       
-      /* Use JavaScript to add this class to the active link if needed, or handle with Liquid */
       #sidebar nav a.active {
         background-color: #0F79D0; 
         color: #ffffff;
         font-weight: bold;
       }
 
+      /* This overrides the theme's default top padding to fix alignment */
       #main_content {
+        padding-top: 0; 
         flex-grow: 1; /* Allows the main content to take up remaining space */
         width: 100%;
       }
