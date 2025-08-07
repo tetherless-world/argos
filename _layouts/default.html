@@ -53,15 +53,15 @@
       /* --- Responsive Design --- */
       @media screen and (max-width: 768px) {
         .main-container {
-          flex-direction: column; /* Stack sidebar and content on small screens */
+          flex-direction: column-reverse; /* Stack sidebar and content on small screens, with content first */
         }
         #sidebar {
           width: 100%; /* Sidebar takes full width */
-          margin-bottom: 1.5em;
+          margin-top: 1.5em;
         }
       }
     </style>
-    
+
 {% seo %}
     {% include head-custom.html %}
   </head>
