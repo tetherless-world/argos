@@ -58,11 +58,10 @@
         font-weight: bold;
       }
 
-      /* This overrides the theme's default top padding to fix alignment */
       #main_content {
         padding-top: 0; 
         flex-grow: 1; /* Allows the main content to take up remaining space */
-        width: 100%;
+        min-width: 0; /* Prevents content overflow issues in flexbox */
       }
       
       /* --- Responsive Design --- */
@@ -83,7 +82,6 @@
 
   <body>
 
-    <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           {% if site.github.is_project_page %}
@@ -102,27 +100,26 @@
         </header>
     </div>
 
-    <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <!-- SIDEBAR NAVIGATION -->
-      <aside id="sidebar">
-        <h3>Navigation</h3>
-        <nav>
-          <ul>
-            <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-            <li><a href="{{ '/ontology.html' | relative_url }}" {% if page.url == "/ontology.html" %}class="active"{% endif %}>Ontology</a></li>
-            <li><a href="{{ '/terminology.html' | relative_url }}" {% if page.url == "/terminology.html" %}class="active"{% endif %}>Terminology</a></li>
-            <li><a href="{{ '/use-case.html' | relative_url }}" {% if page.url == "/use-case.html" %}class="active"{% endif %}>Use Case</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <div class="inner main-container">
+        <aside id="sidebar">
+          <h3>Navigation</h3>
+          <nav>
+            <ul>
+              <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+              <li><a href="{{ '/ontology.html' | relative_url }}" {% if page.url == "/ontology.html" %}class="active"{% endif %}>Ontology</a></li>
+              <li><a href="{{ '/terminology.html' | relative_url }}" {% if page.url == "/terminology.html" %}class="active"{% endif %}>Terminology</a></li>
+              <li><a href="{{ '/use-case.html' | relative_url }}" {% if page.url == "/use-case.html" %}class="active"{% endif %}>Use Case</a></li>
+            </ul>
+          </nav>
+        </aside>
 
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
+        <section id="main_content">
+          {{ content }}
+        </section>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
