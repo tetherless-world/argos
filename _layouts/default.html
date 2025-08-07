@@ -34,6 +34,24 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+      <!-- SIDEBAR NAVIGATION -->
+        <aside id="sidebar">
+          <nav>
+            <ul>
+              <!-- Loop through all pages to generate navigation -->
+              {% assign pages = site.pages | sort: "order" %}
+              {% for p in pages %}
+                {% if p.title %}
+                  <li>
+                    <a href="{{ p.url | relative_url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                      {{ p.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </aside>
       <section id="main_content" class="inner">
         {{ content }}
       </section>

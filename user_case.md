@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Use Case - ManagerAgent
+title: Use Case 
 ---
 
 # Use Case: ManagerAgent on Financial Database
