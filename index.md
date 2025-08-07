@@ -2,122 +2,29 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Welcome to the ARGOS Ontology Publication
 
-[Link to another page](./another-page.html).
+### Access Realignment using Graph-based Ontological Semantics
 
-There should be whitespace between paragraphs.
+The adoption of Large Language Models (LLMs) as natural language interfaces for relational databases (RDBs) is rapidly advancing. However, the practical application of RDB-backed agents is hindered by legacy access control mechanisms that do not fully support the semantic expressiveness and dynamic query generation capabilities of LLMs.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+To resolve these shortcomings, we propose **ARGOS**, a novel symbolic access control framework tailored for LLM-RDB integration. The ARGOS framework intercepts LLM queries and uses a symbolic reasoner that employs this novel ontology to accurately infer the access alignment of each data reference based on the agent's assigned data access policies. Instead of merely rejecting a query that violates a data access policy, ARGOS performs automatic query realignment to comply with the agent's data access rights, preserving user intent while guaranteeing access-level security.
 
-# Header 1
+---
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### Documentation
 
-## Header 2
+Explore the detailed documentation to understand the structure and application of the ARGOS ontology.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+* **[Ontology Overview](./ontology.md):** A deep dive into the ontology's structure, including its core domains (Schema, Policy, Query), concepts, and relationships.
+* **[Terminology](./terminology.md):** A complete glossary of the classes and properties used within the ontology.
 
-### Header 3
+---
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+### Contact
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+For questions, feedback, or inquiries about the ARGOS framework and ontology, please reach out to:
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+**Jane Doe**
+* **Email:** <jane.doe@example.com>
+* **GitHub:** [janedoe](https://github.com/janedoe)
