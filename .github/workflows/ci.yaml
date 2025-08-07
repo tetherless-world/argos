@@ -33,18 +33,16 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2 # Or the version your Slate project uses
-          bundler-cache: true # Automatically runs bundle install
+          bundler-cache: true
 
-      - name: Make scripts executable
-        # This is the fix from before, ensuring the build runs
-        run: chmod +x script/bootstrap script/cibuild
-
+      # ADD THIS STEP
+      - name: Install dependencies
+        run: bundle install
+      
       - name: Build with Middleman
-        # This command builds the site into the /build directory
         run: bundle exec middleman build --clean
       
       - name: Upload artifact
-        # This uploads the /build directory for the deploy job to use
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
