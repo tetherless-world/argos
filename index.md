@@ -10,6 +10,7 @@ The adoption of Large Language Models (LLMs) as natural language interfaces for 
 
 To resolve these shortcomings, we propose **ARGOS**, a novel symbolic access control framework tailored for LLM-RDB integration. The ARGOS framework intercepts LLM queries and uses a symbolic reasoner that employs this novel ontology to accurately infer the access alignment of each data reference based on the agent's assigned data access policies. Instead of merely rejecting a query that violates a data access policy, ARGOS performs automatic query realignment to comply with the agent's data access rights, preserving user intent while guaranteeing access-level security.
 
+![overview_ontology](./statics/extended_ontology_overview.png)
 ---
 
 ### Documentation
@@ -18,6 +19,8 @@ Explore the detailed documentation to understand the structure and application o
 
 * **[Ontology Overview](./ontology.md):** A deep dive into the ontology's structure, including its core domains (Schema, Policy, Query), concepts, and relationships.
 * **[Terminology](./terminology.md):** A complete glossary of the classes and properties used within the ontology.
+* **[User case](./user_case.md):** A complete user case Financial database back LLM agent.
+* **[About](./about.md):** Developers and Contribution to the ontology.
 
 ---
 
@@ -25,6 +28,6 @@ Explore the detailed documentation to understand the structure and application o
 
 For questions, feedback, or inquiries about the ARGOS framework and ontology, please reach out to:
 
-**Jane Doe**
-* **Email:** <jane.doe@example.com>
-* **GitHub:** [janedoe](https://github.com/janedoe)
+**Nipun Pathirage**
+* **Email:** <pathin@rpi.edu>
+* **GitHub:** [pathin](https://github.rpi.edu/pathin)
