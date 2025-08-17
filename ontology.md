@@ -15,8 +15,8 @@ This ontology is organized into three conceptual "worlds" that work in concert:
 - AST/Query World: A semantic representation of an incoming SQL query.
 
 ### Ontology Files 
-- [Ontology](./_layouts/view_tbox.html)
-- [Finance Instance](./_layouts/abox.html)
+- [Ontology](./view_tbox.html)
+- [Finance Instance](./abox.html)
 
 ## Ontology View 
 The following diagram provides a high-level visualization of the ontology's structure, showing the key concepts within each world and the relationships that connect them.
