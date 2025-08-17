@@ -1,16 +1,48 @@
 ---
-layout: null
+layout: default
+title: Ontology Viewer
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Redirecting to Ontology TBox</title>
-    <meta http-equiv="refresh" content="0; url={{ './ARGOS.rdf' | relative_url }}" />
-  </head>
-  <body>
-    <p>
-      If you are not automatically redirected, please
-      <a href="{{ './ARGOS.rdf' | relative_url }}">click here to view the ontology file</a>.
-    </p>
-  </body>
-</html>
+
+<h2>Ontology File Viewer</h2>
+<p>Displaying the contents of <strong>ARGOS.rdf</strong>:</p>
+
+<!-- This preformatted block will hold the RDF content -->
+<pre id="rdf-content-wrapper" style="background-color: #fff; border-radius: 2px; box-shadow: 0 0 10px rgba(0,0,0,.1); padding: 10px; overflow: auto; max-height: 600px;">
+  <code id="rdf-content" style="font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; font-size: 0.875em;">
+    Loading ontology file...
+  </code>
+</pre>
+
+<script>
+  // This script will run once the HTML page has fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // The relative path to your RDF file from the root of your website
+    const rdfUrl = 'ARGOS.rdf';
+    
+    // Get the HTML element where we will display the file's content
+    const contentElement = document.getElementById('rdf-content');
+
+    // Use the modern 'fetch' API to get the file from the server
+    fetch(rdfUrl)
+      .then(response => {
+        // Check if the file was found and the request was successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        // Return the file's content as plain text
+        return response.text();
+      })
+      .then(text => {
+        // IMPORTANT: To prevent the browser from trying to render the RDF tags as HTML,
+        // we set the 'textContent' property. This treats the entire file content as
+        // plain text, which is exactly what we want.
+        contentElement.textContent = text;
+      })
+      .catch(error => {
+        // If the fetch fails (e.g., file not found), display an error message
+        console.error('Error fetching the RDF file:', error);
+        contentElement.textContent = 'Error: Could not load the ontology file. Please ensure the file exists at the specified path and check the browser console for more details.';
+      });
+  });
+</script>
