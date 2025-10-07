@@ -20,14 +20,9 @@ Explore the detailed documentation to understand the structure and application o
 * **[Ontology Overview](./ontology.md):** A deep dive into the ontology's structure, including its core domains (Schema, Policy, Query), concepts, and relationships.
 * **[Terminology](./terminology.md):** A complete glossary of the classes and properties used within the ontology.
 * **[User case](./user_case.md):** A complete user case Financial database back LLM agent.
-* **[About](./about.md):** Developers and Contribution to the ontology.
 
 ---
 
 ### Contact
 
-For questions, feedback, or inquiries about the ARGOS framework and ontology, please reach out to:
-
-**Nipun Pathirage**
-* **Email:** <pathin@rpi.edu>
-* **GitHub:** [pathin](https://github.rpi.edu/pathin)
+For questions, feedback, or inquiries about the ARGOS framework and ontology, please reach out to: <anonymized>
